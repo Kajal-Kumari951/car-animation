@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    animation: shakebody linear 6s infinite;
+}
+
+.sky {
+    height: 100vh;
+    width: 100%;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.trees {
+    height: 100vh;
+    width: 100%;
+    background-image: url(nature-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -144px;
+    animation: slightMove 2s ease-in-out infinite alternate;
+
+}
+
+
+.track {
+    height: 50vh;
+    width: 800vw;
+    background-image: url(istockphoto-463476651-612x612.jpg);
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 70vh;
+    animation: carMove linear 13s infinite;
+
+}
+
+.car {
+    height: 200px;
+    width: 650px;
+    background-image: url(familyChooser-Revuelto_0.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 250px;
+    bottom: 15vh;
+    animation: shake linear .3s infinite;
+
+}
+
+
+.wheel1 img {
+    width: 130px;
+    position: relative;
+    top: 78px;
+    left: 100px;
+    animation: wheelRotation linear .16s infinite;
+}
+
+
+.wheel2 img {
+    width: 130px;
+    position: relative;
+    top: -55px;
+    left: 440px;
+    animation: wheelRotation linear .16s infinite;
+
+}
+
+@keyframes wheelRotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove {
+    100% {
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes shakebody {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes slightMove {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -100px 0;
+
+    }
+}
